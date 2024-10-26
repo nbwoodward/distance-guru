@@ -1,11 +1,10 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
 interface TrainingPlanProps {
-  distance: string
+  distance: "28k" | "50k" | "100k"
 }
 
 export default function TrainingPlan({distance}: TrainingPlanProps) {
-
 
   const schedules = {
     "28k": [
@@ -36,8 +35,6 @@ export default function TrainingPlan({distance}: TrainingPlanProps) {
       { day: "Sunday", workout: "12 miles easy pace (back-to-back long run)" },
     ],
   }
-
-  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
 
   return (
     <div className="min-h-screen bg-background">

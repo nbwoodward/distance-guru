@@ -10,9 +10,9 @@ import { Button } from "@/components/ui/button"
 import { Mountain, Menu, X, ChevronDown } from "lucide-react"
 import Link from "next/link"
 
-export default () => {
+export default function Header() {
+  const selectedPlan = "28k"
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [selectedPlan, setSelectedPlan] = useState("50k")
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
 
   return (
